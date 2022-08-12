@@ -19,7 +19,7 @@ namespace HiDE.MVCTry.SaveData
         {
             int coin = PlayerPrefs.GetInt("Coin");
             _model.SetCoinData(coin);
-            SaveData();
+            
         }
         public override IEnumerator Initialize()
         {
@@ -30,6 +30,7 @@ namespace HiDE.MVCTry.SaveData
         public void OnUpdateCoin(int coin)
         {
             _model.SetCoinData(coin);
+            SaveData();
         }
     }
 }
